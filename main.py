@@ -5,7 +5,6 @@ try :
   from zoneinfo import ZoneInfo
   from openpyxl import load_workbook
   from threading import Thread
-  import streamlit as st
   import os,openpyxl,time
 
   # Initial info of code.
@@ -1029,14 +1028,6 @@ try :
         print("\n Please enter only numbers! (alphabets/special characters is not allowed)")
 
   # Displaying content
-  st.set_page_config(
-      page_title="Smart Library App",
-      page_icon="🔖",
-      layout="wide"
-  )
-
-
-
   if __name__ == "__main__":
     thread = Thread(target=remove_expired_stuff, daemon=True)
     thread.start()
