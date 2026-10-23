@@ -866,17 +866,17 @@ try :
                 print("\n Personal detailes doesn't matched!\n Please enter correct personal detailes.(May be you haven't taken book for reading or returned it)")
                 break
               else :
-                if len(reading_row) == 1 :
-                  print(f"\n Now you have {len(reading_row)} book :")
-                else :
-                  print(f"\n Now you have {len(reading_row)} books :")
-                count = 1
-                for i in reading_row :
-                  for j in range(count,(len(reading_row)+1)) :
-                    count = count + 1
-                    print(f"   {j}. {i[2]} - {i[3]}")
-                    break
                 while True :
+                  if len(reading_row) == 1 :
+                    print(f"\n Now you have {len(reading_row)} book :")
+                  else :
+                    print(f"\n Now you have {len(reading_row)} books :")
+                  count = 1
+                  for i in reading_row :
+                    for j in range(count,(len(reading_row)+1)) :
+                      count = count + 1
+                      print(f"   {j}. {i[2]} - {i[3]}")
+                      break
                   return_book_choice = input("\n Enter book's code which you want to return (Press 'Enter' to exit) : ").strip().title()
                   books_row = book_row(return_book_choice)
                   codes = []
